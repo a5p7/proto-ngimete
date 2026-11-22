@@ -1,0 +1,55 @@
+% Source - https://tex.stackexchange.com/a/177318
+% Posted by egreg
+% Retrieved 2026-11-07, License - CC BY-SA 3.0
+
+\documentclass[a4paper]{book}
+\usepackage[pass,showframe]{geometry} % showframe is just for the example
+
+\usepackage{kantlipsum} % just for the example
+
+\begin{document}
+
+\frontmatter
+
+\begin{titlepage}
+\newgeometry{margin=3cm}
+\centering
+
+\vspace*{\stretch{2}}
+
+\Large The Title of my Thesis
+
+\vspace{\stretch{1}}
+
+\normalsize The duration: 12 weeks
+
+\vspace{\stretch{0.5}}
+
+\begin{tabular}{ll}
+Submission date & xx.yy.zzzz \\[2ex]
+Student's name  & Name \\[2ex]
+From            & Place
+\end{tabular}
+
+\vspace{\stretch{3}}
+
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}l@{}}
+My name & My professor's name \\[2ex]
+        & My supervisor's name
+\end{tabular*}
+
+\vspace{\stretch{2}}
+\end{titlepage}
+
+\restoregeometry
+\cleardoublepage
+
+\tableofcontents
+
+\mainmatter
+
+\chapter{Introduction}
+
+\kant
+
+\end{document}
